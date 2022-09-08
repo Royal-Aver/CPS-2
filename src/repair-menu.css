@@ -1,0 +1,290 @@
+/* FONTS */
+
+@font-face {
+  font-family: "TTlakes", sans-serif;
+  src: url(/fonts/TTLakes-Bold.woff2),
+  url(/fonts/TTLakes-Bold.woff);
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TTlakes", sans-serif;
+  src: url(/fonts/TTLakes-Medium.woff2),
+  url(/fonts/TTLakes-Medium.woff);
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TTlakes", sans-serif;
+  src: url(/fonts/TTLakes-Regular.woff2),
+  url(/fonts/TTLakes-Regular.woff);
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TTlakes", sans-serif;
+  src: url(/fonts/TTLakes-Light.woff2),
+  url(/fonts/TTLakes-Light.woff);
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* GLOBAL */
+
+html, body {
+  height: 100%;
+  font-family: "TTlakes", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1B1C21;
+  letter-spacing: -0.2px;
+}
+
+.container {
+  min-width: 288px;
+  padding:0 16px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding:0 24px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .container {
+    width: 1168px;
+    padding:0 34px;
+  }
+}
+
+/* RESET */
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+ul,
+ol {
+	padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+	letter-spacing: inherit;
+}
+
+button {
+	padding: 0;
+	cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+
+/* ---------REPAIR-MENU--------------------------------------- */
+.repair-menu {
+  background-image: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+}
+
+@media (min-width: 768px) {
+  .repair-menu {
+  padding-bottom: 34px;
+  }
+}
+
+.repair-menu__title-wrapper {
+  background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
+  padding: 16px 16px 16px 0;
+  margin-bottom: 32px;
+}
+
+.repair-menu__title {
+  font-size: 16px;
+  color: #7E7E82;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.repair-menu__content {
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .repair-menu__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2fr;
+  gap: 24px 16px;
+  height: 180px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .repair-menu__list {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px 32px;
+  }
+}
+
+.repair-menu__list--visible-item {
+  height: auto;
+}
+
+.repair-menu__item {
+  width: 208px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+}
+
+@media (min-width: 768px) {
+  .repair-menu__item {
+    width: auto;
+  }
+}
+
+.repair-menu__btn {
+  position: relative;
+}
+
+.repair-menu__btn::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #FF3E79;
+  background: url(../src/images/repair-menu/arrow.svg) no-repeat center;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.repair-menu__show-all {
+  font-family: "TTlakes", sans-serif;
+  font-weight: 500;
+  position: relative;
+  display: none;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.repair-menu__show-all::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 8px;
+  width: 8px;
+  height: 11px;
+  background-image: url(images/services/arrow-bottom.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: transform .3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .repair-menu__show-all {
+    display: block;
+    padding-left: 30px;
+  }
+}
+
+.repair-menu__show-all--active.repair-menu__show-all::before {
+  transform: rotate(180deg);
+  top: 30%;
+}
+
+/* ---------SWIPER--------------------------------------- */
+
+.swiper {
+  min-width: 230px;
+  height: 140px;
+}
+
+@media (min-width: 768px) {
+  .swiper {
+  height: auto;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets {
+  bottom: 35px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #DDDDDD;
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet:not(:last-child) {
+  margin-right: 12px;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #B5B6BC;
+}
+
+
+
